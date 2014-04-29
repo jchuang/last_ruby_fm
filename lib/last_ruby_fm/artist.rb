@@ -1,9 +1,12 @@
 require 'faraday'
 require 'json'
 
-module LastRubyFM
+module LastRubyFm
   class Artist
+    attr_reader :name
+
     def initialize(attributes)
+      @name = attributes['name']
     end
 
     class << self
