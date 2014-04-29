@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+artist = LastRubyFm::Artist.search('Mumford and Sons').first
+artist.name # 'Mumford and Sons'
+artist.image # 'http://userserve-ak.last.fm/serve/500/49582427/Mumford++Sons++PNG.png'
+
+album = LastRubyFm::Album.search('Purple')[1]
+album.artist  # 'Stone Temple Pilots'
+album.tracks # retrieves a list of LastRubyFm::Track objects for the given album
 
 ## Contributing
 
